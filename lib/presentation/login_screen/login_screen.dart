@@ -52,7 +52,7 @@ class LoginScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildUsername(BuildContext context) {
      final bloc = context.read<LoginBloc>();
-          final username = bloc.emailController;
+          final username = bloc.usernameController;
           return CustomTextFormField(
             controller: username,
             hintText: "lbl_username".tr,
@@ -95,7 +95,7 @@ class LoginScreen extends StatelessWidget {
         text: "lbl_sign_in2".tr,
         onPressed: () {
           final bloc = context.read<LoginBloc>();
-          final username = bloc.emailController.text;
+          final username = bloc.usernameController.text;
           if (username.isEmpty) {
             globalMessengerKey.currentState
                 ?.showSnackBar(SnackBar(content: Text("Username is required")));

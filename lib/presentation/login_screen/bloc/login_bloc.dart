@@ -6,7 +6,7 @@ part 'login_state.dart';
 class LoginBloc extends Cubit<LoginState> {
   LoginBloc() : super(LoginInitialState());
 
-  final emailController=TextEditingController();
+  final usernameController=TextEditingController();
 
   final passwordController=TextEditingController();
   bool? visiblity;
